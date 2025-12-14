@@ -1,4 +1,17 @@
 :root {
+  --color-bg: #F0F4F8;
+  --color-bg-button: #008BFE;
+  --font: "Roboto", sans-serif;
+  --font-button-color: #fff;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--color-bg);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
