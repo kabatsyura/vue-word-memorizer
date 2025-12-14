@@ -1,14 +1,10 @@
 <script setup>
-  const date = new Date();
+  import Button from './components/Button.vue';
 </script>
 
 <template>
-  <div>{{ date }}</div>
+  <Button>Начать игру</Button>
 </template>
 
 <style scoped>
-  div {
-    margin: 0 auto;
-    padding: 0;
-  }
 </style>
