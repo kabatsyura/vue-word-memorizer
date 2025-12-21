@@ -9,9 +9,9 @@ import Score from './components/Score.vue';
     <h1 class="logo">Запомни слово</h1>
     <Score :score="100" />
   </section>
-  <sectoin class="game-grid"
-    ><Card :number="1" english-word="unadmitted"
-  /></sectoin>
+  <section class="game-grid">
+    <Card :number="1" english-word="unadmitted" translated-word="тайным" />
+  </section>
   <section class="start-game">
     <Button>Начать игру</Button>
   </section>
