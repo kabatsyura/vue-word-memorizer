@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue';
 
-const { number, englishWord, translatedWord } = defineProps({
+const { number, word, translation, state, status } = defineProps({
   number: Number,
-  englishWord: String,
-  translatedWord: String,
+  word: String,
+  translation: String,
+  state: String,
+  status: String,
 });
 
 const isFlipped = ref(false);
@@ -25,8 +27,8 @@ const numberToString = (number) => {
   <div class="card-body">
     <div class="card-body__inner" :class="{ flipped: isFlipped }">
       <div class="card-number">{{ numberToString(number) }}</div>
-      <div class="card-word front">{{ englishWord }}</div>
-      <div class="card-word back">{{ translatedWord }}</div>
+      <div class="card-word front">{{ word }}</div>
+      <div class="card-word back">{{ translation }}</div>
       <button class="card-button" @click="toggleFlip">перевернуть</button>
     </div>
   </div>
