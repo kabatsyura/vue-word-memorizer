@@ -1,19 +1,31 @@
 :root {
-  --color-bg: #F0F4F8;
-  --color-bg-button: #008BFE;
-  --font: "Roboto", sans-serif;
+  --color-bg: #f0f4f8;
+  --color-bg-button: #008bfe;
+  --font: 'Roboto', sans-serif;
   --font-button-color: #fff;
 }
 
 body {
   font-family: var(--font);
   background-color: var(--color-bg);
-  display: grid;
-  place-items: center;
+
   height: 100vh;
+  padding: 37px 37px 0px 37px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: inherit;
+  font-size: large;
+  text-transform: uppercase;
 }
