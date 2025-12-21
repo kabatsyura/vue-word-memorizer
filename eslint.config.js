@@ -7,14 +7,19 @@ export default [
   ...vue.configs["flat/recommended"],
   prettier,
   {
-    files: ["**/*.vue", "**/*.js"],
+    files: ['**/*.{js,mjs,cjs,vue}'],
+    plugins: { js, vue },
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
     },
+    extends: ['js/recommended', 'airbnb-base', 'plugin:prettier/recommended'],
+    languageOptions: { globals: globals.browser },
     rules: {
       "vue/multi-word-component-names": "off",
       "vue/require-default-prop": "off",
+      'prettier/prettier': 'error', // ошибки Prettier отображаются как ошибки ESLint
+      'no-console': 'off', // если Prettier и ESLint конфликтуют по этому правилу
     },
   },
 ];

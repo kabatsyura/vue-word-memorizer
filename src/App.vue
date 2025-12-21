@@ -1,10 +1,27 @@
 <script setup>
-  import Button from './components/Button.vue';
+import Button from './components/Button.vue';
+import Card from './components/Card.vue';
+import Score from './components/Score.vue';
 </script>
 
 <template>
-  <Button>Начать игру</Button>
+  <section class="nav-bar">
+    <h1 class="logo">Запомни слово</h1>
+    <Score :score="100" />
+  </section>
+  <section class="game-grid">
+    <Card :number="1" english-word="unadmitted" translated-word="тайным" />
+  </section>
+  <section class="start-game">
+    <Button>Начать игру</Button>
+  </section>
 </template>
 
 <style scoped>
+.start-game {
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
 </style>
